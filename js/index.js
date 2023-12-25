@@ -22,10 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
       arrToGenerate.push(numberGenerate);
     }
   }
-
   generationPosition();
 
   setInterval(() => {
     generationPosition();
   }, 1000);
 });
+
+export default { getRandomInt };

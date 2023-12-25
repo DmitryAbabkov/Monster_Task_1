@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style.css */ \"./style.css\");\n/* harmony import */ var _img_goblin_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/goblin.png */ \"./img/goblin.png\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const goblin = document.querySelectorAll('.container-row');\n  const arrGoblins = [];\n  const arrToGenerate = [];\n\n  goblin.forEach((item) => arrGoblins.push(item));\n\n  function getRandomInt() {\n    const min = Math.ceil(0);\n    const max = Math.floor(15);\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  }\n\n  function generationPosition() {\n    const numberGenerate = getRandomInt();\n    if (numberGenerate !== arrToGenerate[arrToGenerate.length]) {\n      arrGoblins.forEach((item) => item.classList.remove('container-goblin'));\n      arrGoblins[numberGenerate].classList.add('container-goblin');\n      arrToGenerate.push(numberGenerate);\n    }\n  }\n\n  generationPosition();\n\n  setInterval(() => {\n    generationPosition();\n  }, 1000);\n});\n\n\n//# sourceURL=webpack://monsters/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style.css */ \"./style.css\");\n/* harmony import */ var _img_goblin_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/goblin.png */ \"./img/goblin.png\");\n\n\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const goblin = document.querySelectorAll('.container-row');\n  const arrGoblins = [];\n  const arrToGenerate = [];\n\n  goblin.forEach((item) => arrGoblins.push(item));\n\n  function getRandomInt() {\n    const min = Math.ceil(0);\n    const max = Math.floor(15);\n    return Math.floor(Math.random() * (max - min + 1)) + min;\n  }\n\n  function generationPosition() {\n    const numberGenerate = getRandomInt();\n    if (numberGenerate !== arrToGenerate[arrToGenerate.length]) {\n      arrGoblins.forEach((item) => item.classList.remove('container-goblin'));\n      arrGoblins[numberGenerate].classList.add('container-goblin');\n      arrToGenerate.push(numberGenerate);\n    }\n  }\n  console.log('test')\n  generationPosition();\n\n  setInterval(() => {\n    generationPosition();\n  }, 1000);\n});\n\n// export{getRandomInt, generationPosition};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ getRandomInt });\nconsole.log('test')\n\n\n//# sourceURL=webpack://monsters/./js/index.js?");
 
 /***/ }),
 
@@ -67,6 +67,18 @@ eval("module.exports = __webpack_require__.p + \"2dbd01ce16c0fa83cb67.png\";\n\n
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -77,6 +89,11 @@ eval("module.exports = __webpack_require__.p + \"2dbd01ce16c0fa83cb67.png\";\n\n
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
